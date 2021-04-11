@@ -32,20 +32,6 @@ const Product = {
                             comment: "Scarce who adieu he isle rie holy a reverie long.",
                             author: "Moinul",
                             date: "2019-02-13T17:57:28.556094Z"
-                        },
-                        {
-                            id: 3,
-                            rating: 4,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Rahat",
-                            date: "2017-12-02T17:57:28.556094Z"
-                        },
-                        {
-                            id: 4,
-                            rating: 2,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Rony",
-                            date: "2019-12-02T17:57:28.556094Z"
                         }
                     ]
                 },
@@ -77,20 +63,6 @@ const Product = {
                             comment: "Scarce who adieu he isle rie holy a reverie long.",
                             author: "Moinul",
                             date: "2019-02-13T17:57:28.556094Z"
-                        },
-                        {
-                            id: 3,
-                            rating: 4,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Rahat",
-                            date: "2017-12-02T17:57:28.556094Z"
-                        },
-                        {
-                            id: 4,
-                            rating: 2,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Rony",
-                            date: "2019-12-02T17:57:28.556094Z"
                         }
                     ]
                 },
@@ -122,20 +94,6 @@ const Product = {
                             comment: "Scarce who adieu he isle rie holy a reverie long.",
                             author: "Moinul",
                             date: "2019-02-13T17:57:28.556094Z"
-                        },
-                        {
-                            id: 3,
-                            rating: 4,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Rahat",
-                            date: "2017-12-02T17:57:28.556094Z"
-                        },
-                        {
-                            id: 4,
-                            rating: 2,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Rony",
-                            date: "2019-12-02T17:57:28.556094Z"
                         }
                     ]
                 }
@@ -172,20 +130,6 @@ const Product = {
                             comment: "Scarce who adieu he isle rie holy a reverie long.",
                             author: "Mamunul",
                             date: "2019-02-13T17:57:28.556094Z"
-                        },
-                        {
-                            id: 3,
-                            rating: 4,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.",
-                            author: "Rajjak ",
-                            date: "2017-12-02T17:57:28.556094Z"
-                        },
-                        {
-                            id: 4,
-                            rating: 2,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Salam ",
-                            date: "2019-12-02T17:57:28.556094Z"
                         }
                     ]
                 },
@@ -217,20 +161,6 @@ const Product = {
                             comment: "Scarce who adieu he isle rie holy a reverie long.",
                             author: "Raju",
                             date: "2019-02-13T17:57:28.556094Z"
-                        },
-                        {
-                            id: 3,
-                            rating: 4,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Siam",
-                            date: "2017-12-02T17:57:28.556094Z"
-                        },
-                        {
-                            id: 4,
-                            rating: 2,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Jony",
-                            date: "2019-12-02T17:57:28.556094Z"
                         }
                     ]
                 },
@@ -262,20 +192,6 @@ const Product = {
                             comment: "Scarce who adieu he isle rie holy a reverie long.",
                             author: "Moinul",
                             date: "2019-02-13T17:57:28.556094Z"
-                        },
-                        {
-                            id: 3,
-                            rating: 4,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Rahat",
-                            date: "2017-12-02T17:57:28.556094Z"
-                        },
-                        {
-                            id: 4,
-                            rating: 2,
-                            comment: "Scarce who adieu he isle rie holy a reverie long.!",
-                            author: "Rony",
-                            date: "2019-12-02T17:57:28.556094Z"
                         }
                     ]
                 }

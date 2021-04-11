@@ -1,24 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Nav, Navbar, NavbarBrand, NavItem, Collapse, NavbarToggler } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
+    const [isNavOpen, setIsNavOpen] = useState(false)
+    const onToggle = () =>{
+        setIsNavOpen(!isNavOpen)
+    }
     return (
         <div className='bg-light'>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light container ">
+            <Navbar light color="light" expand='sm'>
+                <div className="container">
+                    <NavbarBrand> <Link to='/'> <img src="assets/images/logo.png" alt="" /></Link></NavbarBrand>
+                    <NavbarToggler onClick={onToggle}/>
+                    <Collapse navbar isOpen={isNavOpen} >
+                        <Nav navbar className="ml-auto">
+                            <NavItem>
+                                <Link to="/" active className="nav-link" >Home </Link>
+                            </NavItem>
+                            <NavItem>
+                                <Link to="/shoes" className="nav-link" >Shoes </Link>
+                            </NavItem>
+                            <NavItem>
+                                <Link to="/backpack" className="nav-link">Backpack </Link>
+                            </NavItem>
+                            <NavItem>
+                                <Link to="/contact" className="nav-link" >Contact </Link>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
 
-                <a className="navbar-brand" href="/"><img src="assets/images/logo.png" alt=""/></a>
-
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div className="navbar-nav">
-                        <a className="nav-item nav-link active" href="#">Home </a>
-                        <a className="nav-item nav-link" href="#">Shoes</a>
-                        <a className="nav-item nav-link" href="#">Backpack</a>
-                        <a className="nav-item nav-link" href="#">Contact us</a>
-                    </div>
                 </div>
-            </nav>
+            </Navbar>
+
         </div>
     );
 };

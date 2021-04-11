@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardImg, CardBody, CardFooter, CardDeck, CardText, Button, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardBody, CardFooter, CardDeck, CardText, Button, CardTitle, Modal, ModalBody, ModalFooter } from 'reactstrap';
 
 const cardStyle = {
     card: {
@@ -13,9 +13,9 @@ const cardStyle = {
         paddingBottom: "20px",
         paddingTop: "0px"
     },
-    image: {
+    cursor: {
         cursor: 'pointer'
-    }
+    },
 }
 
 const ItemCard = (props) => {
@@ -23,9 +23,9 @@ const ItemCard = (props) => {
     const item = props.data.item.map(data => (
         <div className="col-md-4 py-2" >
             <Card style={cardStyle.card}>
-                <CardImg src={data.image} style={cardStyle.image} onClick={() => props.onSelect(data)} />
+                <CardImg src={data.image} style={cardStyle.cursor} onClick={() => props.onSelect(data)} />
                 <CardBody  className="text-center">
-                    <CardTitle className="h5">{data.name}</CardTitle>
+                    <CardTitle className="h5" style={cardStyle.cursor}  onClick={() => props.onSelect(data)}  >{data.name}</CardTitle>
                     <CardText>{data.description}</CardText>
                     <h6>{data.price}$</h6>
                 </CardBody>
@@ -41,6 +41,7 @@ const ItemCard = (props) => {
             <CardDeck>
                 {item}
             </CardDeck>
+            
         </div>
     );
 };
