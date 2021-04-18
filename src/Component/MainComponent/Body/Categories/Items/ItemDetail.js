@@ -5,8 +5,7 @@ import LoadComment from './LoadComment';
 
 const ItemDetail = (props) => {
 
-    const { name, image, description, price, comments } = props.item;
-
+    const { name, image, description, price, itemCode } = props.item;
 
     return (
         <div>
@@ -20,7 +19,9 @@ const ItemDetail = (props) => {
                         <h4>{price}$</h4>
                         <Button style={{ backgroundImage: "linear-gradient(#EB4687,#E91C69)" }} className=" btn text-white my-3">Buy Now </Button>
                         <CardTitle className="h3 pt-5">Comments</CardTitle>
-                        <LoadComment comments={comments} />
+                        <LoadComment
+                            itemCode={itemCode}
+                        />
                     </CardBody>
                 </Card>
             </div>
