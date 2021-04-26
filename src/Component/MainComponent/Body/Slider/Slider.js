@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import './Slider.css';
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators } from 'reactstrap';
 import { connect } from 'react-redux';
+import { Button } from 'reactstrap';
 
 const mapStateToProps = state => {
     return {
-        sliderData: state.sliderData
+        featuresData: state.featuredData
     }
 }
 
 class Slider extends Component {
     state = {
-        items: this.props.sliderData,
+        items: this.props.featuresData,
         activeIndex: 0,
         animating: false
     }
@@ -31,13 +31,13 @@ class Slider extends Component {
 
         const next = () => {
             if (this.state.animating) return;
-            const nextIndex = this.state.activeIndex === this.state.items.length - 1 ? 0 : this.state.activeIndex + 1;
+            const nextIndex = this.state.activeIndex === this.props.featuresData.length - 1 ? 0 : this.state.activeIndex + 1;
             this.setActiveIndex(nextIndex)
         }
 
         const previous = () => {
             if (this.state.animating) return;
-            const nextIndex = this.state.activeIndex === 0 ? this.state.items.length - 1 : this.state.activeIndex - 1;
+            const nextIndex = this.state.activeIndex === 0 ? this.props.featuresData.length - 1 : this.state.activeIndex - 1;
             this.setActiveIndex(nextIndex)
 
         }
@@ -48,22 +48,26 @@ class Slider extends Component {
         }
 
 
-        const sliderItems = this.state.items.map(item => (
+        const sliderItems = this.props.featuresData.map(item => (
             <CarouselItem
                 onExiting={() => this.setAnimating(true)}
                 onExited={() => this.setAnimating(false)}
                 key={item.id}
             >
                 <div >
-                    <div className="row align-items-center ">
-                        <div className="col-md-7 ">
-                            <h1>{item.name} </h1>
-                            <p>{item.description} </p>
-                            <h3 style={{ color: ' #DA2064' }}>{item.price}$</h3>
-                            <button style={{ backgroundImage: "linear-gradient(#EB4687,#E91C69)" }} className="btn text-white my-2">Buy Now </button>
-                        </div>
-                        <div className="col-md-5">
+                    <div className="row align-items-center " >
+                        <div className="col-lg-5">
                             <img src={item.image} className="d-block w-100" alt="..." />
+                        </div>
+
+                        <div className="col-lg-7 ">
+                            <h3>{item.name} </h3>
+                            <p>{item.description} </p>
+                            <h4>
+                                <span className='text-danger'>${item.price}</span>
+                                <small><del className='text-muted'> ${item.oldPrice}</del></small>
+                            </h4>
+                            <Button color='dark' className="my-2 w-50">Buy Now </Button>
                         </div>
                     </div>
                 </div>
@@ -72,12 +76,12 @@ class Slider extends Component {
         ))
 
         return (
-            <div id="slider" className="py-5">
-
+            <div id="slider" className="py-5" >
                 <Carousel
                     activeIndex={this.state.activeIndex}
                     next={next}
                     previous={previous}
+
                 >
                     <CarouselIndicators
                         items={this.state.items}

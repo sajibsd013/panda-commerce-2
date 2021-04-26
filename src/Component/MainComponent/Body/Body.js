@@ -1,13 +1,14 @@
 import React from 'react';
+import TopSection from '../Header/TopSection';
 import Categories from './Categories/Categories';
 import Items from './Categories/Items/Items';
-import Slider from './Slider/Slider';
+
 
 
 const Body = () => {
     return (
         <div className='container'>
-            <Slider />
+            <TopSection/>
             <Categories />
             <Items />
         </div>

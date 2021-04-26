@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.CardHover{
+  border-radius: 10px;
+  border: none!important;
+  box-shadow: 5px 5px 10px lightgray
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.CardHover:hover{
+  border-radius: 10px;
+  border: none;
+  box-shadow:  0px 0px 10px rgb(182, 180, 180)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cursor {
+  cursor: pointer
 }
 
-.App-header {
-  background-color: #282c34;
+.cart-body p{
+  line-height: .75;
+}
+
+#CardItem .footer{
+  background-color: white;
+  border: none;
+  padding-bottom: 20px;
+  padding-top: 0px
+}
+
+
+.button{
+  background-color: rgb(239 150 45)!important;
+}
+
+.carousel{
+  background-color: #FEEAE9;
+  padding: 50px;
+}
+
+.carousel-control-next, .carousel-control-prev{
+  width: 5%!important;
+}
+
+section{
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 767px) {
+  #OrderReview {
+    display: flex!important;
+    flex-direction: column-reverse!important;
+    
+  }
+
+  .Cart{
+    display: none!important;
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link{
+  color: black!important;
+}
+#Notfound{
+  min-height: 100vh;
+}
+
+#Notfound h1{
+  font-weight: 900;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#Notfound h4{
+  font-weight: 700;
 }

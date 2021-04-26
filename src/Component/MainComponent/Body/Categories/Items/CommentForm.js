@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import { Form, Input, Button } from 'reactstrap';
 import { connect } from 'react-redux';
+import { ADD_COMMENT } from '../../../../../Redux/ActionTypes';
 
-
+const mapDispatchToProps = dispatch => {
+    return {
+        addComment: (author, comment, rating, itemCode) => dispatch({
+            type: ADD_COMMENT,
+            payload: {
+                author: author,
+                comment: comment,
+                rating: rating,
+                itemCode: itemCode
+            }
+        })
+    }
+}
 class CommentForm extends Component {
 
     state = {
@@ -18,22 +31,16 @@ class CommentForm extends Component {
     }
 
     onSubmit = event => {
-        event.preventDefault();
-        this.props.dispatch({
-            type: "ADD_COMMENT",
-            payload: {
-                author: this.state.author,
-                comment: this.state.comment,
-                rating: this.state.rating,
-                itemCode: this.props.item.itemCode
-            }
-        })
+
+        this.props.addComment(this.state.author, this.state.comment, this.state.rating, this.props.item.itemCode);
 
         this.setState({
             author: '',
             comment: '',
             rating: ''
         })
+        event.preventDefault();
+
     }
     render() {
         return (
@@ -45,6 +52,7 @@ class CommentForm extends Component {
                         placeholder="Your Name"
                         value={this.state.author}
                         onChange={event => this.onInoutChange(event)}
+                        required
 
                     />
                     <br />
@@ -53,6 +61,7 @@ class CommentForm extends Component {
                         name='rating'
                         value={this.state.rating}
                         onChange={event => this.onInoutChange(event)}
+                        required
 
                     >
                         <option>1</option>
@@ -68,6 +77,7 @@ class CommentForm extends Component {
                         value={this.state.comment}
                         onChange={event => this.onInoutChange(event)}
                         placeholder="Your Comment"
+                        required
 
                     />
                     <br />
@@ -79,4 +89,4 @@ class CommentForm extends Component {
 
 }
 
-export default connect()(CommentForm);
+export default connect(null, mapDispatchToProps)(CommentForm);

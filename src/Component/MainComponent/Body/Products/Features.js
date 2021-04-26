@@ -7,21 +7,21 @@ import TopSection from '../../Header/TopSection';
 
 const mapStateToProps = state => {
     return {
-        BackpackData: state.BackpackData,
+        featuredData: state.featuredData,
     }
 }
 
-class Backpack extends Component {
+class Features extends Component {
 
     render() {
-        document.title ="Panda Commerce- Backpack";
- 
+        document.title ="Panda Commerce- Features";
+
         return (
-            <div className='container'>
-                <TopSection/>
-                <h3 className='text-muted'>Backpack </h3>
+            <div className='container py-5'>
+                <TopSection />
+                <h3 className='text-muted'>Features </h3>
                 <ItemCard
-                    items={this.props.BackpackData}
+                    items={this.props.featuredData}
                 />
             </div>
         )
@@ -29,4 +29,4 @@ class Backpack extends Component {
 
 }
 
-export default connect(mapStateToProps)(Backpack);
+export default connect(mapStateToProps)(Features);

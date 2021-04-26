@@ -1,74 +1,60 @@
 import React, { Component } from 'react';
-import ItemCard from './ItemCard';
-import ItemDetail from './ItemDetail';
-import { Modal, ModalBody, ModalFooter, Button } from 'reactstrap';
+import ItemCard from './Itemcard/ItemCard';
 import { connect } from 'react-redux';
-import CommentForm from './CommentForm';
+import { Link } from 'react-router-dom';
 
 
 const mapStateToProps = state => {
     return {
-        ShoesData: state.ShoesData,
-        BackpackData: state.BackpackData
+        ShoesData: state.ShoesData.slice(0, 3),
+        BackpackData: state.BackpackData.slice(0, 3),
+        featuredData: state.featuredData.slice(0, 3)
     }
 }
 
-
 class Items extends Component {
-    state = {
-        ShoesData: this.props.ShoesData,
-        BackpackData: this.props.BackpackData,
-        itemDetail: null,
-        modalOpen: false
-    }
     render() {
-
-        const onSelect = (data) => {
-            this.setState({
-                itemDetail: data,
-                modalOpen: !this.state.modalOpen
-            })
-        }
-
-        const onModalClick = () => {
-            this.setState({
-                modalOpen: !this.state.modalOpen
-            })
-        }
-
-
         return (
-
             <div>
-                <div className="my-3">
-                    <h3 className='text-muted'>Shoes</h3>
+                 <div className="my-5">
+                    <div className="my-1 d-flex justify-content-between">
+                        <h3 className='text-muted'>Features</h3>
+
+                        <Link to='/Features'>
+                            <h6 className='' style={{ color: '#ff9e04' }}>see all </h6>
+                        </Link>
+                    </div>
+
                     <ItemCard
-                        ShoesData={this.state.ShoesData}
-                        onSelect={onSelect}
-                    />
-                </div>
-                <div className="my-3">
-                    <h3 className='text-muted'>Backpack</h3>
-                    <ItemCard
-                        ShoesData={this.state.BackpackData}
-                        onSelect={onSelect}
+                        items={this.props.featuredData}
                     />
                 </div>
 
-                <Modal isOpen={this.state.modalOpen}>
-                    <ModalBody>
-                        <ItemDetail
-                            item={this.state.itemDetail}
-                        />
-                        <hr />
-                        <CommentForm
-                            item={this.state.itemDetail}
-                        />
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button onClick={onModalClick} >Close</Button>
-                    </ModalFooter>
-                </Modal>
+                <div className="my-5">
+                    <div className="my-1 d-flex justify-content-between">
+                        <h3 className='text-muted'>Shoes</h3>
+
+                        <Link to='/shoes'>
+                            <h6 className='' style={{ color: '#ff9e04' }}>see all </h6>
+                        </Link>
+                    </div>
+                    <ItemCard
+                        items={this.props.ShoesData}
+                    />
+                </div>
+
+                <div className="my-5">
+                    <div className="my-1 d-flex justify-content-between">
+                        <h3 className='text-muted'>Backpack</h3>
+
+                        <Link to='/Backpack'>
+                            <h6 className='' style={{ color: '#ff9e04' }}>see all </h6>
+                        </Link>
+                    </div>
+                    <ItemCard
+                        items={this.props.BackpackData}
+                    />
+                </div> 
 
             </div >
         );

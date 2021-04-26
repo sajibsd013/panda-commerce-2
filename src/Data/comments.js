@@ -1,124 +1,104 @@
+import { SHOE001, SHOE002, SHOE003, SHOE004, SHOE005, SHOE006,BAG001, BAG002, BAG003, BAG004, BAG005, BAG006 } from "./itemCode";
+
+
 const comments = [
         {
-            itemCode: 0,
+            itemCode: SHOE001,
             id: 0,
             rating: 5,
-            comment: "Imagine all the eatables, living in conFusion! ",
-            author: "Shanto",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
+            author: "Shanto Islam ",
             date: "2018-10-16T17:57:28.556094Z"
         },
         {
-            itemCode: 0,
+            itemCode: SHOE002,
             id: 1,
             rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Karim",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
+            author: "Karim Islam",
             date: "2017-09-05T17:57:28.556094Z"
         },
         {
-            itemCode: 1,
+            itemCode: SHOE003,
             id: 2,
             rating: 3,
-            comment: "Eat it, just eat it!",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
             author: "Moinul",
             date: "2019-02-13T17:57:28.556094Z"
         },
         {
-            itemCode: 1,
+            itemCode: SHOE004,
             id: 3,
             rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Rahat",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
+            author: "Rahat Islam",
             date: "2017-12-02T17:57:28.556094Z"
         },
         {
-            itemCode: 2,
+            itemCode: SHOE005,
             id: 4,
             rating: 2,
             comment: "It's your birthday, we're gonna party!",
-            author: "Rony",
+            author: "Rony Islam",
             date: "2019-12-02T17:57:28.556094Z"
         },
         {
-            itemCode: 2,
+            itemCode: SHOE006,
             id: 5,
             rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "Shanto",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
+            author: "Shanto Islam",
             date: "2018-10-16T17:57:28.556094Z"
         },
         {
-            itemCode: 3,
+            itemCode: BAG001,
             id: 6,
             rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Karim",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
+            author: "Karim Islam",
             date: "2017-09-05T17:57:28.556094Z"
         },
         {
-            itemCode: 4,
+            itemCode: BAG002,
             id: 7,
             rating: 3,
-            comment: "Eat it, just eat it!",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
             author: "Moinul",
             date: "2019-02-13T17:57:28.556094Z"
         },
         {
-            itemCode: 4,
+            itemCode: BAG003,
             id: 8,
             rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
             author: "Rahat",
             date: "2017-12-02T17:57:28.556094Z"
         },
         {
-            itemCode: 4,
+            itemCode: BAG004,
             id: 9,
             rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "Rony",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
+            author: "Rony Islam",
             date: "2019-12-02T17:57:28.556094Z"
         },
         {
-            itemCode: 5,
+            itemCode: BAG005,
             id: 10,
             rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Moinul",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
+            author: "Moinul Islam",
             date: "2019-02-13T17:57:28.556094Z"
         },
         {
-            itemCode: 2,
+            itemCode: BAG006,
             id: 11,
             rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Rahat",
+            comment: 'Lorem ipsum dolor sit amet consectetur  similique exercitationem maiores deserunt!',
+            author: "Rahat Islam",
             date: "2017-12-02T17:57:28.556094Z"
         },
-        {
-            itemCode: 5,
-            id: 12,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "Rony",
-            date: "2019-12-02T17:57:28.556094Z"
-        },
-        {
-            itemCode: 6,
-            id: 13,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Rahat",
-            date: "2017-12-02T17:57:28.556094Z"
-        },
-        {
-            itemCode: 6,
-            id: 14,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "Rony",
-            date: "2019-12-02T17:57:28.556094Z"
-        }
+        
     ]
 
 

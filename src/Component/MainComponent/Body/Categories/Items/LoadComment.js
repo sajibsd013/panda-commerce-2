@@ -9,13 +9,10 @@ const mapStateToProps = state => {
 }
 
 class LoadComment extends Component {
-    state = {
-        comments: this.props.comments
-    }
 
     render() {
 
-        const commentFilter = this.state.comments.filter((comment)=>{
+        const commentFilter = this.props.comments.filter((comment)=>{
             return comment.itemCode === this.props.itemCode
         })
         const Comment = commentFilter.map(data => (
@@ -23,9 +20,9 @@ class LoadComment extends Component {
                 <hr />
                 <h5>{data.author}</h5>
                 <p>{data.comment}</p>
-                <p>{data.itemCode}</p>
-                <p>{data.id}</p>
-                <p> Item Code {this.props.itemCode}</p>
+                <h6>Rating : {data.rating}</h6>
+
+                {/* <p> Item Code {this.props.itemCode}</p> */}
                 <small className="text-muted">{dateFormat(data.date, "dddd, mmmm dS, yyyy, h:MM:ss TT")}</small>
             </div>
         ))
